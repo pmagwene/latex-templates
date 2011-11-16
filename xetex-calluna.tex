@@ -1,25 +1,16 @@
 %!TEX TS-program = xelatex
-\documentclass[12pt,letterpaper]{scrartcl}
+\documentclass[12pt]{article}
 \usepackage[margin=1.25in]{geometry}
 
 \usepackage{mathspec} % includes fontspec
 \usepackage{microtype}
 \usepackage{unicode-math}
 
-\defaultfontfeatures{Scale=MatchLowercase,Numbers={Lining,Proportional}}
-\setmainfont[Renderer=Basic,Ligatures=TeX]{Linux Libertine O} 
-
-% A number of sans serif fonts look decent w/Libertine
-\setsansfont{Linux Biolinum O}
-%\setsansfont{DejaVu Sans Condensed}
-%\setsansfont{Gill Sans Light} 
-%\setsansfont{Lucida Sans}
-%\setsansfont{Optima}
-
-\setmonofont[Scale=0.8]{DejaVu Sans Mono}
-
+\defaultfontfeatures{Scale=MatchLowercase}
+\setromanfont[Mapping=tex−text]{Calluna} 
+\setsansfont[Mapping=tex−text ]{Calluna Sans}
+\setmonofont[Mapping=tex−text,Scale=0.8]{Menlo}%
 \setmathfont{Asana-Math.otf}
-\setmathsfont(Digits,Latin,Greek){Linux Libertine O}
 
 
 \newcommand{\laplace}{$$\int_0^\infty e^{-st}f(t)$$}
@@ -31,12 +22,6 @@
 \section{Thomas Paine}
     
     These are the times that try men's souls. The summer soldier, and the sunshine patriot, will in this crisis shrink from the service of his country. But he that stands it now deserves the love and thanks of man and woman...
-
-\setsansfont{Optima}
-\section{Thomas Paine in Optima}
-
-\setsansfont{Lucida Sans}
-\section{Thomas Paine in Lucida Sans}
 
 \section{Math}
 
@@ -51,7 +36,6 @@ And here is some verbatim:
     print "How about 1 and l?"
 \end{verbatim}  
 
-Is 11 different than 17? Do en dash -- and em dash --- work?
 
     
 \end{document}
