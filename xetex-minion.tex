@@ -2,21 +2,22 @@
 \documentclass[12pt,letterpaper]{scrartcl}
 \usepackage[margin=1.25in]{geometry}
 
-\usepackage{mathspec} % includes fontspec
+\usepackage[MnSymbol]{mathspec} % includes fontspec
 \usepackage{microtype}
 \usepackage{unicode-math}
 
 \defaultfontfeatures{Scale=MatchLowercase,Numbers={Lining,Proportional}}
-\setmainfont[Renderer=Basic,Ligatures=TeX]{Linux Libertine O} 
+\setmainfont[Renderer=Basic,Ligatures=TeX]{Minion Pro} 
 
 % A number of sans serif fonts look decent w/Libertine
 %\setsansfont{Linux Biolinum O}
 %\setsansfont{DejaVu Sans Condensed}
 %\setsansfont{Gill Sans Light} 
-\setsansfont{Lucida Sans}
+\setsansfont[Scale=0.86]{Myriad Pro}
 %\setsansfont{Optima}
-\setmonofont[Scale=0.8]{DejaVu Sans Mono}
+\setmonofont[Scale=0.8]{Menlo}
 \setmathfont{Asana-Math.otf}
+\setmathsfont[Set=Greek,Uppercase=Italic,Lowercase=Italic]{Minion Pro}
 %\setmathsfont(Digits,Latin,Greek){Linux Libertine O}
 
 \usepackage{xcolor}
@@ -45,7 +46,7 @@ showtabs=false}
 
 
 
-\newcommand{\laplace}{$$\int_0^\infty \mathup e^{-st}f(t)$$}
+\newcommand{\laplace}{$$\int_0^\infty \mathup  e^{-st}f(t)$$}
 
 
 
@@ -74,7 +75,7 @@ And here is some verbatim:
     print "How about 1 and l?"
 \end{lstlisting}  
 
-Is 11 different than 17? Do en dash -- and em dash --- work?
+Is 11 different than 17? Do en dash -- and em dash --- work? Well?
 
     
 \end{document}
