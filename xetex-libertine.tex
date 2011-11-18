@@ -15,14 +15,37 @@
 %\setsansfont{Gill Sans Light} 
 %\setsansfont{Lucida Sans}
 %\setsansfont{Optima}
-
 \setmonofont[Scale=0.8]{DejaVu Sans Mono}
-
 \setmathfont{Asana-Math.otf}
-\setmathsfont(Digits,Latin,Greek){Linux Libertine O}
+%\setmathsfont(Digits,Latin,Greek){Linux Libertine O}
+
+\usepackage{xcolor}
+\definecolor{spot}{rgb}{0.6,0,0}
+\definecolor{boxframe}{rgb}{0.6,0,0}
+\definecolor{boxfill}{rgb}{1,.95,.95}
+
+\usepackage{listings}
+\lstset{%
+     aboveskip=1.5em,
+     xleftmargin=3pt,
+     xrightmargin=3pt,
+     frame=single,
+     backgroundcolor=\color{boxfill},
+     rulecolor=\color{boxframe},
+     framesep=2.5pt,
+     framerule=0.5pt,
+     language=Python,
+     breaklines=true,
+    basicstyle={\ttfamily \small},                         
+breakatwhitespace=false,                
+showspaces=false,                       
+showstringspaces=false
+showtabs=false}
 
 
-\newcommand{\laplace}{$$\int_0^\infty e^{-st}f(t)$$}
+
+
+\newcommand{\laplace}{$$\int_0^\infty \mathup e^{-st}f(t)$$}
 
 
 
@@ -32,24 +55,24 @@
     
     These are the times that try men's souls. The summer soldier, and the sunshine patriot, will in this crisis shrink from the service of his country. But he that stands it now deserves the love and thanks of man and woman...
 
-\setsansfont{Optima}
-\section{Thomas Paine in Optima}
-
-\setsansfont{Lucida Sans}
-\section{Thomas Paine in Lucida Sans}
+% \setsansfont{Optima}
+% \section{Thomas Paine in Optima}
+% 
+% \setsansfont{Lucida Sans}
+% \section{Thomas Paine in Lucida Sans}
 
 \section{Math}
 
 Here's a simple equation: $\cos^2 \varphi + \sin^2 \varphi = -e^{i\pi}$. And a display equation is below:
     \laplace
 And here is some verbatim:
-\begin{verbatim}
+\begin{lstlisting}
     import math
     x = math.cos(2*math.pi)
     l = 1.1 * tan(x)
     print "Can you tell the difference between O and 0?"
     print "How about 1 and l?"
-\end{verbatim}  
+\end{lstlisting}  
 
 Is 11 different than 17? Do en dash -- and em dash --- work?
 
