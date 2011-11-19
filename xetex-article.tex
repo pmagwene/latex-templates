@@ -1,39 +1,22 @@
 %!TEX TS-program = xelatex
-\documentclass[12pt]{scrartcl}
+%\documentclass[12pt,letterpaper]{scrartcl}
+\documentclass[12pt,letterpaper]{article}
 \usepackage[margin=1.25in]{geometry}
 
-\usepackage{mathspec} % includes fontspec
+\usepackage[MnSymbol]{mathspec} % includes fontspec
+\usepackage[math-style=TeX]{unicode-math}
+
+\defaultfontfeatures{Scale=MatchLowercase,Numbers={Lining,Proportional}}
+\setmainfont[Renderer=Basic,Ligatures=TeX]{Minion Pro} 
+\setsansfont{Myriad Pro}
+\setmonofont[Scale=0.95]{Inconsolata}
+\setmathfont{xits-math.otf}
+\setmathsfont[Set=Greek,Uppercase=Italic,Lowercase=Italic]{Minion Pro}
+	
 \usepackage{microtype}
-\usepackage{unicode-math}
-
-\defaultfontfeatures{Scale=MatchLowercase}
-\setromanfont[Mapping=tex−text]{Cambria}
-\setmathfont{Cambria Math}
-\setsansfont[Mapping=tex−text ]{Calibri}
-\setmonofont[Mapping=tex−text,Scale=0.9]{Consolas}
-
-\newcommand{\laplace}{$$\int_0^\infty e^{-st}f(t)$$}
-
-
 \begin{document}
-
-\section{Thomas Paine}
     
-    These are the times that try men's souls. The summer soldier, and the sunshine patriot, will in this crisis shrink from the service of his country. But he that stands it now deserves the love and thanks of man and woman...
-
-\section{Math}
-
-Here's a simple equation: $\cos^2 \varphi + \sin^2 \varphi = -e^{i\pi}$. And a display equation is below:
-    \laplace
-And here is some verbatim:
-\begin{verbatim}
-    import math
-    x = math.cos(2*math.pi)
-    l = 1.1 * tan(x)
-    print "Can you tell the difference between O and 0?"
-    print "How about 1 and l?"
-\end{verbatim}  
-
+%% Body of document here
 
     
 \end{document}

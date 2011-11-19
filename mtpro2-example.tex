@@ -1,0 +1,103 @@
+% LaTeX Article with MTPro2 fonts Template
+% For use with MathTime Professional II
+\documentclass[12pt,letterpaper]{scrartcl}
+\usepackage[margin=1.25in]{geometry}
+
+% MathTimeProfessional II (MTPro2) fonts
+%   See <pctex>\texmf\doc\fonts\mtpro2\guide2.pdf for complete instructions.
+%   See <pctex>\texmf\doc\fonts\mtpro2\mtpro2.pdf for LaTeX usage instructions.
+
+%   For sales and other information visit www.pctex.com
+
+% In the following, numbers in brackets refer to sections in the
+% mtpro2.pdf document.
+
+% For migration from MTPro to MTPro2: move all options from packages
+% mtpro, mtpams, and mtpb to mtpro2. See [3] for details.  
+
+% Define text fonts
+%\usepackage[T1]{fontenc}		% use this if European fonts (ec) package is installed
+%\usepackage{textcomp}			% adds some additional symbols
+\usepackage[scaled=0.92]{helvet}	% set Helvetica as the sans-serif font
+\renewcommand{\rmdefault}{ptm}		% set Times as the default text font
+
+% If AMS-LaTeX is used, it can be loaded before or after mtpro2
+\usepackage{amsmath}		
+
+% The following loads mtpro and defines some common MTPro options [2, 4]
+\usepackage[subscriptcorrection,slantedGreek,nofontinfo]{mtpro2}
+
+% Options for blackboard bold fonts [2.9]:
+%   mtphrb - holey roman bold        mtpbb - blackboard bold
+%   mtphrd - holey roman bold dark   mtpbbd - blackboard bold dark
+%   mtphbi - holey bold italic       mtpbbi - blackboard bold italic
+
+% Options for alternate character sets [2.6, 2.7]:
+%   mtpcal - assigns Math Script to the math alphabets \mathcal and \mathbcal,
+%	overwriting the default math calligraphic typeface
+%   mtpccal - assigns Math Curly to the math alphabets \mathcal and \mathbcal,
+%	overwriting the default math calligraphic typeface
+%   mtpscr - assigns Math Script to the new math alphabets \mathscr and \mathbscr,
+%       leaving \mathcal unchanged
+%   mtpfrak - assigns Math Fraktur to a new math alphabet \mathfrak
+
+% Options for AMS symbols
+%   amssymbols - makes the mtpro2 AMS symbols available
+
+% Optionally load the following package to use heavy symbols in place of bold symbols
+%\usepackage{bm}
+
+% Set the beginning of a LaTeX document
+
+\usepackage{xcolor}
+\definecolor{spot}{rgb}{0.6,0,0}
+\definecolor{boxframe}{rgb}{0.6,0,0}
+\definecolor{boxfill}{rgb}{1,.95,.95}
+
+\usepackage{listings}
+\lstset{%
+     aboveskip=1.5em,
+     xleftmargin=3pt,
+     xrightmargin=3pt,
+     frame=single,
+     backgroundcolor=\color{boxfill},
+     rulecolor=\color{boxframe},
+     framesep=2.5pt,
+     framerule=0.5pt,
+     language=Python,
+     breaklines=true,
+    basicstyle={\ttfamily \small},                         
+breakatwhitespace=false,                
+showspaces=false,                       
+showstringspaces=false
+showtabs=false}
+
+\newcommand{\laplace}{$$\int_0^\infty \mathup  e^{-st}f(t)$$}
+
+
+
+\begin{document}
+
+\section{Thomas Paine}
+    
+    These are the times that try men's souls. The summer soldier, and the sunshine patriot, will in this crisis shrink from the service of his country. But he that stands it now deserves the love and thanks of man and woman...
+
+\section{Math}
+
+Here's a simple equation: $\cos^2 \varphi + \sin^2 \varphi = -e^{i\pi}$. And a display equation is below:
+
+%    \laplace
+
+And here is some verbatim:
+\begin{lstlisting}
+    import math
+    x = math.cos(2*math.pi)
+    l = 1.1 * tan(x)
+    print "Can you tell the difference between O and 0?"
+    print "How about 1 and l?"
+\end{lstlisting}  
+
+Is 11 different than 17? Do en dash -- and em dash --- work? Well?
+
+    
+\end{document}

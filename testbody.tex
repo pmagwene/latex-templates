@@ -1,0 +1,43 @@
+%-----------------------------------------------
+
+\newcommand{\normdistn}{\ensuremath{%
+f(x) = 
+\frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+}}
+
+\newcommand{\varx}{\ensuremath{\frac{1}{n}\sum_{i=1}^{n}(x_i-\mu)}}
+
+
+%-----------------------------------------------
+\title{A \LaTeX\ Test Document}
+\author{Paul M. Magwene}
+
+\begin{document}
+\maketitle
+    
+\section{`The Crisis' by Thomas Paine}
+
+These are the times that try men's souls. The summer soldier and the sunshine patriot will, in this crisis, shrink from the service of their country; but he that stands by it now, deserves the love and thanks of man and woman. Tyranny, like hell, is not easily conquered; yet we have this consolation with us, that the harder the conflict, the more glorious the triumph. What we obtain too cheap, we esteem too lightly: it is dearness only that gives every thing its value....
+
+
+\section{Math}
+
+Here's a simple equation: $\cos^2 \varphi + \sin^2 \varphi = -e^{i\pi}$ and here is a an equation with a sum: \varx. We follow these up with a `display equation' as shown below:
+\[
+\normdistn
+\]
+
+Let's do some typesetting of number, for example: 11 and 17. Now, here's how those look in math mode: $11$ and $17$. Are they any different? If so, which looks better?
+
+\section{Programming}
+
+And here is some verbatim:
+\begin{verbatim}
+    import math
+    x = math.cos(2*math.pi)
+    l = 1.1 * tan(x)
+    print "Can you tell the difference between O and 0?"
+    print "How about 1 and l?"
+\end{verbatim}  
+    
+\end{document}
