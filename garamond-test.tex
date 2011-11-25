@@ -1,0 +1,38 @@
+%!TEX TS-program = xelatex
+%\documentclass[12pt,letterpaper]{article}
+\documentclass[12pt,letterpaper]{scrartcl}
+\usepackage[margin=1.25in]{geometry}
+\linespread{1.03}
+
+\ifxetex
+    %\usepackage[garamond]{mathdesign}
+    \usepackage[onlymath=true,lucidasmallscale=true]{lucimatx}
+    %\usepackage[complete,subscriptcorrection]{mtpro2}  % times pro math
+    \usepackage{xltxtra}
+    \defaultfontfeatures{Scale=MatchLowercase,Mapping=tex-text}
+    \setmainfont[Ligatures=TeX,Numbers={Lining,Proportional}]{Adobe Garamond Pro} 
+    %\setsansfont[BoldFont=Myriad Pro Semibold]{Myriad Pro}
+    \setsansfont[Scale=0.9]{Optima}
+    %\setsansfont[BoldFont=Eau Naturelle Sans Medium]{Eau Naturelle}  
+    %\setsansfont[BoldFont=Eau Douce Sans Medium]{Eau Douce} 
+    %\setsansfont[Scale=0.9]{Lato} 
+    %\setsansfont[BoldFont=Open Sans Semibold]{Open Sans}  
+    %\setsansfont{Puritan 2.0}
+    %\setmonofont[Scale=0.92]{Anonymous Pro}
+    \setmonofont[Scale=0.85]{Menlo}
+\else
+    %\usepackage[complete,subscriptcorrection]{mtpro2}  % times pro math
+    %\usepackage[onlymath=true,lucidasmallscale=true]{lucimatx}    
+    %\renewcommand{\rmdefault}{ugm} % garamond as serif
+    \usepackage[garamond]{mathdesign}
+    \let\circledS\relax
+    \let\digamma\relax
+    \usepackage[onlymath=true,lucidasmallscale=true]{lucimatx}
+    \usepackage{textcomp}
+    \renewcommand*\sfdefault{uop}% optima sans serif
+    \usepackage[scaled=0.95]{inconsolata}
+    \usepackage{microtype}
+\fi
+
+	
+\input{testbody.tex}
