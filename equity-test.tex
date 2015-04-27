@@ -2,9 +2,12 @@
 \documentclass[12pt,letterpaper]{article}
 
 \usepackage[no-math]{fontspec}
+%\usepackage{fontspec}
 \setmainfont{Equity Text A}[SmallCapsFont={Equity Caps A}]
 \setsansfont{Concourse T4}
 \setmonofont{Triplicate T4}
+
+
 
 % use titlesec to get small caps sectioning commands
 \newfontfamily\headingfont[]{Equity Caps A}
@@ -15,6 +18,9 @@
 \titleformat*{\paragraph}{\headingfont\bfseries}
 
 \usepackage[math]{blindtext}
+
+%\usepackage[math-style=TeX]{unicode-math}
+%\setmathfont{XITS Math}
 
 \let\hbar\relax
 \usepackage[subscriptcorrection,slantedGreek,nofontinfo]{mtpro2}
