@@ -1,8 +1,0 @@
-# Fdb version 2
-["latex"] 0 "testbody.tex" "testbody.dvi" "testbody" 
-  "testbody.tex" 1322201929 8589 697c827befe99f309f2f21e2e3bb2956 ""
-["pdflatex"] 1322201931 "testbody.tex" "testbody.pdf" "testbody" 
-  "e.g., `I\hbox'" 0 -1 0 ""
-  "e.g., `\hobx'" 0 -1 0 ""
-  "testbody.aux" 1322201931 8 a94a2480d3289e625eea47cd1b285758 ""
-  "testbody.tex" 1322201929 8589 697c827befe99f309f2f21e2e3bb2956 ""

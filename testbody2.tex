@@ -9,21 +9,32 @@ f(x) =
 
 
 %-----------------------------------------------
-\title{\LARGE A Test Document}
-\author{\large Paul M. Magwene}
-\date{\large\today}
+\title{\Large A \LaTeX\ Test Document}
+\subtitle{\large A Test of Fonts and other Options}
+\author{\normalsize Paul M. Magwene}
+\affil{\small Duke University, Department of Biology}
+\date{}
+%\date{\normalsize\today}
 
-\begin{document}
 \maketitle
     
-\section{`The Crisis' by Thomas Paine}
+\section{\textit{The Crisis} by Thomas Paine}
 
 These are the times that try men's souls. The summer soldier and the sunshine patriot will, in this crisis, shrink from the service of their country; but he that stands by it now, deserves the love and thanks of man and woman. Tyranny, like hell, is not easily conquered; yet we have this consolation with us, that the harder the conflict, the more glorious the triumph. What we obtain too cheap, we esteem too lightly: it is dearness only that gives every thing its value....
+
+\subsection{About Thomas Paine}
+Thomas Paine was a political activist, philosopher, and American revolutionary. \textit{The Crisis} was published in pamphlet form in December 1776, some six months after the start of the Declaration of Independence.
+
+\subsubsection{Taking up space}
+I'm really just testing the various section headings here.  This is a subsubsection.
+
+\paragraph{Why did I use this quote?} 
+I had the above Thomas Paine quote hammered into my head sometime in junior high. Now, some 30 years later, I still remember it quite vividly.
 
 
 \section{Math}
 
-Here's a simple equation: $\cos^2 \varphi + \sin^2 \varphi = -e^{i\pi}$ and here is a an equation with a sum: \varx. We follow these up with a `display equation' as shown below:
+Here's a simple equation: $\cos^2 \varphi + \sin^2 \varphi = -e^{i\pi}$. I hope that looked nice. Let's follow up with another equation with a sum: \varx. We follow these up with a ``display equation'' as shown below:
 \[
 \normdistn
 \]
@@ -33,13 +44,15 @@ Let's do some typesetting of numbers, for example: 11, 12 and 17. Now, here's ho
 \section{Programming}
 
 And here is some verbatim:
-\begin{verbatim}
+
+\begin{lstlisting}[language=Python]
     import math
-    x = math.cos(2*math.pi)
+    x = math.cos(2 * math.pi) # this is a comment
     l = 1.1 * tan(x)
     print "Can you tell the difference between O and 0?"
     print "How about 1 and l?"
-\end{verbatim}  
+\end{lstlisting}  
+
 
 \section{Author Summary}
 Quantitative or complex phenotypes are traits that are under the control of multiple genes and environmental factors.  Identifying the parts of the genome that contribute to variation in complex traits (Quantitative Trait Loci or QTLs), and ultimately the genes and alleles that are mechanistically responsible for trait variation, is a primary challenge in animal and plant breeding, population studies of human health and disease, and evolutionary genetics. In this study we describe an analytical framework that allows investigators to marry a QTL mapping approach called ``bulk segregant analysis'' (BSA) with high-throughput genome sequencing methodologies in order to map traits quickly, efficiently, and in a relatively inexpensive manner. This framework provides a statistical basis for analyzing BSA experiments that use next-generation sequencing and will help to accelerate the identification of QTLs in both model and non-model organisms.
@@ -62,3 +75,4 @@ In this paper we have focused on QTL mapping with an $F_2$ experimental design, 
 
 Other experimental designs, such as backcrosses, will not have allele frequencies of 0.5.  For these situations the null expected distributions of $G$ and $G'$ can be approximated using the equations presented in Text S1, although in this case it will be necessary to know the parental origin of the SNP alleles.  Similarly, since $G$ can be generalized to an arbitrary number of classes, one-tailed scenarios involving comparison to either a theoeretical population or a random sampling of segregants can be addressed in this framework. 
 
+    

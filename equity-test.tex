@@ -1,0 +1,42 @@
+%!TEX TS-program = xelatex
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[no-math]{fontspec}
+\setmainfont{Equity Text A}[SmallCapsFont={Equity Caps A}]
+\setsansfont{Concourse T4}
+\setmonofont{Triplicate T4}
+
+% use titlesec to get small caps sectioning commands
+\newfontfamily\headingfont[]{Equity Caps A}
+\usepackage{titlesec}
+\titleformat*{\section}{\Large\headingfont\bfseries}
+\titleformat*{\subsection}{\large\headingfont\bfseries}
+\titleformat*{\subsubsection}{\headingfont\bfseries}
+\titleformat*{\paragraph}{\headingfont\bfseries}
+
+\usepackage[math]{blindtext}
+
+\let\hbar\relax
+\usepackage[subscriptcorrection,slantedGreek,nofontinfo]{mtpro2}
+\DeclareMathSymbol{0}{\mathalpha}{operators}{`0}
+\DeclareMathSymbol{1}{\mathalpha}{operators}{`1}
+\DeclareMathSymbol{2}{\mathalpha}{operators}{`2}
+\DeclareMathSymbol{3}{\mathalpha}{operators}{`3}
+\DeclareMathSymbol{4}{\mathalpha}{operators}{`4}
+\DeclareMathSymbol{5}{\mathalpha}{operators}{`5}
+\DeclareMathSymbol{6}{\mathalpha}{operators}{`6}
+\DeclareMathSymbol{7}{\mathalpha}{operators}{`7}
+\DeclareMathSymbol{8}{\mathalpha}{operators}{`8}
+\DeclareMathSymbol{9}{\mathalpha}{operators}{`9}
+
+
+\begin{document}
+
+\blinddocument
+
+\section{And now for some math!}
+
+\blindmathpaper
+
+\end{document}
+

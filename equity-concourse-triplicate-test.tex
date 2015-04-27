@@ -1,0 +1,59 @@
+%!TEX TS-program = xelatex
+\documentclass[fontsize=12pt,
+               headings=normal,
+               paper=letter]{scrartcl}
+
+%\usepackage[onehalfspacing]{setspace}
+
+\usepackage{microtype}
+
+
+\usepackage[no-math]{fontspec}
+\setmainfont[Ligatures=TeX,Numbers={Lining,Proportional}]{Equity Text A}
+\setsansfont{Concourse T4}
+\setmonofont[StylisticSet={2,3}]{Triplicate T4s}  % stylistic set 2 = code mode
+
+\newfontfamily\headingfont[]{Concourse T4}
+%\setkomafont{paragraph}{\headingfont\mdseries\itshape}
+
+\let\hbar\relax
+\usepackage[complete,subscriptcorrection]{mtpro2}  % times pro math
+\DeclareMathSymbol{0}{\mathalpha}{operators}{`0}
+\DeclareMathSymbol{1}{\mathalpha}{operators}{`1}
+\DeclareMathSymbol{2}{\mathalpha}{operators}{`2}
+\DeclareMathSymbol{3}{\mathalpha}{operators}{`3}
+\DeclareMathSymbol{4}{\mathalpha}{operators}{`4}
+\DeclareMathSymbol{5}{\mathalpha}{operators}{`5}
+\DeclareMathSymbol{6}{\mathalpha}{operators}{`6}
+\DeclareMathSymbol{7}{\mathalpha}{operators}{`7}
+\DeclareMathSymbol{8}{\mathalpha}{operators}{`8}
+\DeclareMathSymbol{9}{\mathalpha}{operators}{`9}
+
+
+
+
+\usepackage{color}
+\definecolor{mygray}{gray}{0.65}
+\usepackage{listings}
+\lstset{%
+aboveskip=1ex,
+xleftmargin=0.25em,
+xrightmargin=0.25em,
+breaklines=true,
+basicstyle={\ttfamily \small},
+breakatwhitespace=false,
+showspaces=false,
+showstringspaces=false
+showtabs=false,
+commentstyle=\color{mygray}\itshape
+}
+
+\usepackage[affil-it]{authblk}
+\setlength{\affilsep}{0.25em}
+
+\begin{document}
+
+
+\input{testbody2.tex}
+
+\end{document}
