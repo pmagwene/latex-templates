@@ -1,0 +1,174 @@
+\documentclass[svgnames]{beamer}
+\useinnertheme[shadow,outline]{chamfered}
+\usecolortheme{beaver}
+\beamertemplatenavigationsymbolsempty
+\usefonttheme{professionalfonts}
+
+\usepackage{amsmath}
+\usepackage[bold-style=ISO]{unicode-math}
+\defaultfontfeatures{Ligatures=TeX,Scale=.92}
+\setmainfont{Lucida Bright OT}
+\setsansfont{Lucida Sans OT}
+\setmathfont{Lucida Bright Math OT}
+\setmathfont[version=bold]{Lucida Bright Math OT Demibold}
+\setmonofont[Numbers=SlashedZero]{Lucida Sans Typewriter OT}
+
+
+\usepackage{listings}
+\lstset{%
+aboveskip=1ex,
+xleftmargin=0.5em,
+xrightmargin=3pt,
+breaklines=true,
+basicstyle={\ttfamily \small},
+breakatwhitespace=false,
+showspaces=false,
+showstringspaces=false
+showtabs=false,
+keywordstyle=\color{DarkBlue}\bfseries,
+stringstyle=\color{DarkRed},
+commentstyle=\color{Olive}\itshape,
+upquote=true,
+}
+
+\definecolor{boxfill}{gray}{0.975}
+\definecolor{boxframe}{named}{gray}
+
+\lstnewenvironment{code}
+{\lstset{backgroundcolor=\color{boxfill}}}
+{}
+\lstnewenvironment{python}
+{\lstset{language=python,backgroundcolor=\color{boxfill}}}
+{}
+\lstnewenvironment{bash}
+{\lstset{language=bash,backgroundcolor=\color{boxfill}}}
+{}
+\lstnewenvironment{R}
+{\lstset{language=R,backgroundcolor=\color{boxfill}}}
+{}
+
+
+
+\newcommand{\Mtx}[1]{\ensuremath{\mathbf{#1}}}
+
+
+
+
+
+\parskip=0.5em
+
+
+%===========================================================
+% Title Info
+\title{Scientific Computing for Biologists}
+\subtitle{Lecture 10: Mixture Models and Multi-dimensional Scaling} % (optional)
+
+\author{Instructor: Paul M. Magwene}
+\date{05 November 2013}
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+%===========================================================
+
+%===========================================================
+\begin{frame}
+  \frametitle{Outline of Lecture}
+
+\begin{itemize}
+    \item K-means clustering
+    \item Mixture model based clustering
+    \item Multi-dimensional scaling (MDS)
+\end{itemize}
+
+\end{frame}
+%===========================================================
+%===========================================================
+\begin{frame}
+  \frametitle{Gaussian Mixture Models}
+
+A common starting point in mixture modeling is to assume that the components are Gaussian.
+
+If the data are univariate, then the mixture model is given by:
+
+\[
+p_{\mathrm{mix}} = \sum_{s=1}^g \pi_s f(\Mtx{x}|\mu_i, \sigma_i^2)
+\]
+
+where the $\mu_i$ and $\sigma_i$ are the means and standard deviations of each component distribution and:
+
+\[
+f(\Mtx{x}|\mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+\]
+
+\end{frame}
+
+%===========================================================
+%===========================================================
+\begin{frame}[fragile]
+  \frametitle{MDS Example: Road Distances between U.S. Cities}
+
+\begin{center}
+\begin{verbatim}
+     BOS  CHI   DC  DEN   LA  MIA   NY  SEA   SF
+BOS    0  963  429 1949 2979 1504  206 2976 3095
+CHI  963    0  671  996 2054 1329  802 2013 2142
+DC   429  671    0 1616 2631 1075  233 2684 2799
+DEN 1949  996 1616    0 1059 2037 1771 1307 1235
+LA  2979 2054 2631 1059    0 2687 2786 1131  379
+MIA 1504 1329 1075 2037 2687    0 1308 3273 3053
+NY   206  802  233 1771 2786 1308    0 2815 2934
+SEA 2976 2013 2684 1307 1131 3273 2815    0  808
+SF  3095 2142 2799 1235  379 3053 2934  808    0
+\end{verbatim}
+\end{center}
+
+\end{frame}
+%===========================================================
+
+\begin{frame}[fragile]
+\frametitle{Some Code}
+
+Here's some code:
+
+\begin{python}
+def myfunc(x):
+    print "Hello, Python World"
+
+def yourfunc(x):
+    print "Hello, LaTeX World!"
+
+x = 10
+myfunc(x)
+
+\end{python}
+
+
+\end{frame}
+
+%========================================
+
+%========================================
+\begin{frame}[fragile]
+  \frametitle{Last Slide}
+
+  This is the \emph{last} slide of the document.
+
+It was created using:
+  \begin{itemize}
+  \item YASnippet
+  \item AucTeX 
+  \item XeLaTeX
+  \end{itemize}
+
+\end{frame}
+%========================================
+
+
+
+
+%========================================
+\end{document}
